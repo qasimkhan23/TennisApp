@@ -16,7 +16,7 @@ import InactiveExplore from "../assets/InactiveExplore.svg";
 import ChatStackScreens from "./ChatStack";
 import EventsStackScreens from "./EventsStack";
 import SearchStackScreens from "./SearchStack";
-
+import ExploreStackScreens from "./ExploreStack";
 const BottomTab = createBottomTabNavigator();
 
 const BottomStackScreens: FC<{}> = ({ navigation }: any) => {
@@ -63,7 +63,7 @@ const BottomStackScreens: FC<{}> = ({ navigation }: any) => {
             return focused ? <ActiveExplore /> : <InactiveExplore />;
           },
         }}
-        component={ExploreScreen}
+        component={ExploreStackScreens}
         name="Explore"
       />
       <BottomTab.Screen

@@ -1,13 +1,28 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   ImageBackground,
   Text,
   TouchableOpacity,
   View,
   Image,
+  ScrollView,
 } from "react-native";
 import styles from "./Styles";
+
 const ExploreScreen = ({ navigation }: any) => {
+  const [show, setShow] = useState(false);
+
+  const switchScreen = () => {
+    setShow(true);
+
+    setTimeout(() => {
+      navigation.navigate("EventsScreenNested");
+      setTimeout(() => {
+        setShow(false);
+      }, 100);
+    }, 2000);
+  };
+
   return (
     <View style={[styles.container]}>
       <View style={styles.mainView}>
@@ -28,8 +43,15 @@ const ExploreScreen = ({ navigation }: any) => {
         </ImageBackground>
       </View>
 
-      <TouchableOpacity style={styles.continueBtn}>
-        <Text style={styles.continueBtnText}>Let’s Find A Partner</Text>
+      <TouchableOpacity style={styles.continueBtn} onPress={switchScreen}>
+        {show ? (
+          <Image
+            style={{ width: "40%", height: "100%", alignSelf: "center" }}
+            source={require("../../../assets/spinner.gif")}
+          />
+        ) : (
+          <Text style={styles.continueBtnText}>Let’s Find A Partner</Text>
+        )}
       </TouchableOpacity>
     </View>
   );

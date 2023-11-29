@@ -19,8 +19,10 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     flex: 1,
+    // padding: "40%",
     maxHeight: "60%",
     width: "100%",
+    // backgroundColor: "red",
   },
   transparentView: {
     flex: 1,
@@ -80,16 +82,18 @@ const styles = StyleSheet.create({
   mainView: {
     marginTop: 48,
     alignItems: "center",
+    justifyContent: "center",
     flex: 1,
   },
   continueBtn: {
     height: 55,
     backgroundColor: "#D5FF45",
     borderRadius: 16,
-    marginTop: 6,
+    marginTop: 16,
     justifyContent: "center",
     alignItems: "center",
-    marginBottom: 48,
+    marginBottom: 40,
+    // margin
   },
   continueBtnText: {
     fontFamily: "semiBold",

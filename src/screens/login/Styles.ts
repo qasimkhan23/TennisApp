@@ -25,6 +25,7 @@ const styles = StyleSheet.create({
     borderTopLeftRadius: 30,
     paddingRight: 24,
     paddingLeft: 24,
+    paddingTop: 12,
   },
   inputField: {
     height: 64,
