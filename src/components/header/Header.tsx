@@ -1,14 +1,7 @@
-import React, { FC, ReactElement } from "react";
-import {
-  Text,
-  TouchableOpacity,
-  View,
-  Image,
-  ScrollView,
-  StyleSheet,
-} from "react-native";
-import BackIcon from "../../../assets/BackIcon.svg";
 import { useNavigation } from "@react-navigation/native";
+import React from "react";
+import { Text, TouchableOpacity, View } from "react-native";
+import BackIcon from "../../../assets/BackIcon.svg";
 
 import styles from "./Styles";
 

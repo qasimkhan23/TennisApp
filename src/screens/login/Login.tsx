@@ -1,15 +1,8 @@
-import React, { useEffect, useState } from "react";
-import {
-  StyleSheet,
-  Text,
-  TextInput,
-  TouchableOpacity,
-  View,
-  Image,
-} from "react-native";
-import styles from "./Styles";
-import GoogleIcon from "../../../assets/GoogleIcon.svg";
+import React from "react";
+import { Image, Text, TouchableOpacity, View } from "react-native";
 import FacebookIcon from "../../../assets/FacebookIcon.svg";
+import GoogleIcon from "../../../assets/GoogleIcon.svg";
+import styles from "./Styles";
 
 const LoginScreen = ({ navigation, setLoader, loaderBodyContent }: any) => {
   return (

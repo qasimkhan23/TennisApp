@@ -13,6 +13,7 @@ import { useFonts } from "expo-font";
 import AuthStackScreens from "./navigation/AuthStack";
 import BottomStackScreens from "./navigation/BottomStack";
 import RootNavigator from "./navigation/RootNavigator";
+import AsyncStorage from "@react-native-async-storage/async-storage";
 
 const STATUSBAR_HEIGHT = StatusBar.currentHeight;
 
@@ -53,14 +54,17 @@ function App() {
     medium: require("./assets/fonts/SF-Pro-Rounded-Medium.otf"),
     bold: require("./assets/fonts/SF-Pro-Rounded-Bold.otf"),
     semiBold: require("./assets/fonts/SF-Pro-Rounded-Semibold.otf"),
+    displayMedium: require("./assets/fonts/SF-Pro-Display-Medium.otf"),
+    displayBold: require("./assets/fonts/SF-Pro-Display-Bold.otf"),
   });
   if (!fontsLoaded) {
     return;
   }
+
   return (
     <View style={styles.container}>
       <MyStatusBar backgroundColor={"#162529"} barStyle={"light-content"} />
-      <SafeAreaView style={{ flex: 1, backgroundColor: "#162529" }}>
+      <SafeAreaView style={{ flex: 1, backgroundColor: "#000" }}>
         <RootNavigator />
       </SafeAreaView>
     </View>

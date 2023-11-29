@@ -1,19 +1,15 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import {
-  StyleSheet,
+  ScrollView,
   Text,
   TextInput,
   TouchableOpacity,
   View,
-  Image,
-  ScrollView,
 } from "react-native";
-import styles from "./Styles";
-import GoogleIcon from "../../../assets/GoogleIcon.svg";
-import FacebookIcon from "../../../assets/FacebookIcon.svg";
+import DropDownPicker from "react-native-dropdown-picker";
 import Person from "../../../assets/Person.svg";
 import Header from "../../components/header/Header";
-import DropDownPicker from "react-native-dropdown-picker";
+import styles from "./Styles";
 
 const SignupScreen = ({ navigation }: any) => {
   const [open, setOpen] = useState(false);
@@ -88,7 +84,10 @@ const SignupScreen = ({ navigation }: any) => {
             placeholderTextColor="#8F8F93"
           />
         </View>
-        <TouchableOpacity style={styles.continueBtn}>
+        <TouchableOpacity
+          style={styles.continueBtn}
+          onPress={() => navigation.navigate("SignupContinueScreen")}
+        >
           <Text style={styles.continueBtnText}>Continue</Text>
         </TouchableOpacity>
       </ScrollView>
