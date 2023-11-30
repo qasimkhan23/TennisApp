@@ -7,7 +7,7 @@ import styles from "./Styles";
 const ProfileDetailScreen = ({ navigation }: any) => {
   let data = [
     {
-      name: "Lara Melikson",
+      name: "Lara Melikson sdfsdfsfsfsdfsfsffsf fddsfsdfsdfsdfsdf",
       date: "12.05.2023",
       id: "6-2 | 4-6 | 6-3",
     },

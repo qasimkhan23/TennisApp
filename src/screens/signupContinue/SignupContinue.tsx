@@ -6,9 +6,24 @@ import {
   Text,
   TouchableOpacity,
   View,
+  Dimensions,
 } from "react-native";
 import Header from "../../components/header/Header";
 import styles from "./Styles";
+
+const Wrapper = ({ children, style }) => {
+  const [childHeight, setChildHeight] = useState<any>(500);
+  const [screenHeight, setScreenHight] = useState<any>(
+    Dimensions.get("window").height - 200
+  );
+
+  const WrapperView = childHeight > screenHeight ? ScrollView : View;
+  return (
+    <WrapperView style={{ ...style }}>
+      <View>{children}</View>
+    </WrapperView>
+  );
+};
 
 const SignupContinueScreen = ({ navigation }: any) => {
   const [open, setOpen] = useState(false);
@@ -37,11 +52,18 @@ const SignupContinueScreen = ({ navigation }: any) => {
         <Text style={styles.desp}>Choose your tennis level</Text>
       </View>
 
-      <ScrollView
+      <Wrapper
+        // bounces={false}
         style={styles.bodyContainer}
-        contentContainerStyle={styles.contentContainerStyle}
+        // contentContainerStyle={styles.contentContainerStyle}
       >
-        <View style={styles.mainView}>
+        <View
+          style={styles.mainView}
+          onLayout={({ nativeEvent }) => {
+            console.log("nativeee", nativeEvent);
+            // setChildHeight(nativeEvent.layout.height);
+          }}
+        >
           <ImageBackground
             style={styles.bg}
             source={require("../../../assets/bg_1.png")}
@@ -128,7 +150,7 @@ const SignupContinueScreen = ({ navigation }: any) => {
             </View>
           </ImageBackground>
         </View>
-      </ScrollView>
+      </Wrapper>
       <TouchableOpacity
         style={styles.signupBtn}
         onPress={() => setToken("token", "dummyToken")}

@@ -14,17 +14,20 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     // alignItems: "center",
     paddingHorizontal: 12,
+    color: "white",
   },
   clickableView: {
     flex: 1,
     // alignItems: "center",
     marginTop: 12,
+    opacity: 1,
   },
   cardTitle: {
-    fontFamily: "medium",
+    fontFamily: "bold",
     fontSize: 18,
     color: "#FFF",
     lineHeight: 18,
+    opacity: 1,
   },
   cardDesp: {
     width: "70%",
@@ -35,7 +38,9 @@ const styles = StyleSheet.create({
     marginTop: 8,
     lineHeight: 20,
   },
-  avatarContainer: {},
+  avatarContainer: {
+    opacity: 1,
+  },
   avatar: {
     height: 45,
     width: 45,
@@ -46,6 +51,7 @@ const styles = StyleSheet.create({
     fontSize: 18,
     color: "#D5FF45",
     lineHeight: 18,
+    opacity: 100,
   },
 });
 export default styles;

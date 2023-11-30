@@ -151,15 +151,16 @@ const styles = StyleSheet.create({
   },
   svgView: {
     height: OS == "android" ? "32%" : "25%",
+    marginBottom: 8,
   },
   avatarContainer: {
     justifyContent: "center",
     alignItems: "center",
-    marginTop: "8%",
+    marginTop: OS == "android" ? "8%" : "7.5%",
   },
   avatar: {
-    height: 140,
-    width: 140,
+    height: "93%",
+    width: "36%",
     borderRadius: 134,
   },
 

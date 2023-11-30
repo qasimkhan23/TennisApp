@@ -1,4 +1,5 @@
-import { StyleSheet } from "react-native";
+import { StyleSheet, Platform } from "react-native";
+const OS = Platform.OS;
 
 const styles = StyleSheet.create({
   container: {
@@ -12,7 +13,7 @@ const styles = StyleSheet.create({
     marginTop: 43,
   },
   infoContainer: {
-    marginTop: 85,
+    marginTop: "18%",
     alignItems: "center",
   },
   nameText: {
@@ -38,7 +39,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     flexDirection: "row",
     justifyContent: "center",
-    marginTop: 30,
+    marginTop: "10%",
   },
   historyBtn: {
     backgroundColor: "#162529",
@@ -77,7 +78,7 @@ const styles = StyleSheet.create({
   },
   bioContainer: {
     alignItems: "center",
-    marginTop: 32,
+    marginTop: "12%",
     paddingHorizontal: 32,
   },
   bioText: {
@@ -88,7 +89,7 @@ const styles = StyleSheet.create({
   },
   cardsContainer: {
     justifyContent: "center",
-    marginTop: 70,
+    marginTop: OS == "android" ? "0%" : "30%",
     flexDirection: "row",
   },
   card: {

@@ -8,17 +8,17 @@ import styles from "./Styles";
 const GameHistoryScreen = ({ navigation }: any) => {
   let data = [
     {
-      name: "Lara Melikson",
+      name: "Lara Melikson sdfsdfdsf dsfsdfdsfdsfsdf sdsdfsdf",
       date: "12.05.2023",
       id: "6-2 | 4-6 | 6-3",
     },
     {
-      name: "Dana reznikov",
+      name: "Dana reznikov dfsdfsdfsdfsdfdsf sdfdsfdsfsdfdsfdsdfsdfds",
       date: "12.05.2023",
       id: "6-2   4-6   6-3",
     },
     {
-      name: "Lara Melikson",
+      name: "Yuval Melikson dsfsdf sdfsfdsf",
       date: "12.05.2023",
       id: "6-2   4-6   6-3",
     },

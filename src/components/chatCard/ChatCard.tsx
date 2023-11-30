@@ -16,21 +16,30 @@ const ChatCard = ({ details, index, arrayLength, isNewChat }: any) => {
         { borderBottomWidth: index == arrayLength - 1 ? 0 : 1 },
       ]}
     >
-      <View style={styles.imageContainer}>
+      <TouchableOpacity
+        style={styles.imageContainer}
+        onPress={() => navigation.navigate("NewChatScreen")}
+      >
         <Image
           style={styles.cardImage}
           source={require("../../../assets/profileImage.png")}
         />
         <View style={styles.cardTextContainer}>
-          <Text style={styles.cardText}>{name}</Text>
+          <Text style={styles.cardText}>
+            {name.length > 20 ? name.substring(0, 20) + "..." : name}
+          </Text>
 
           <Text
             style={isNewChat ? styles.newChatCardExpText : styles.cardExpText}
           >
-            {isNewChat ? exp : chat}
+            {isNewChat
+              ? exp
+              : chat.length > 30
+              ? chat.substring(0, 30) + "..."
+              : chat}
           </Text>
         </View>
-      </View>
+      </TouchableOpacity>
       {isNewChat == false ? (
         <View>
           <Text style={styles.time}>{time}</Text>

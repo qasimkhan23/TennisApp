@@ -30,45 +30,36 @@ const NewEventScreen = ({ navigation }: any) => {
   return (
     <View style={[styles.container]}>
       <Header />
-      <ScrollView>
-        <Text style={styles.title}>Create a new meeting</Text>
+      <Text style={styles.title}>Create a new meeting</Text>
 
-        <View style={styles.inputField}>
-          <TextInput
-            secureTextEntry
-            style={styles.input}
-            placeholder="Game Location"
-            placeholderTextColor="#8F8F93"
-          />
-        </View>
-        <View style={styles.mainView}>
-          <TouchableOpacity
-            style={styles.date}
-            onPress={() => showMode("date")}
-          >
-            <Text style={styles.inputFieldText}>
-              {date
-                .toLocaleString()
-                .substring(0, date.toLocaleString().indexOf(" "))}
-            </Text>
-          </TouchableOpacity>
-          <TouchableOpacity
-            style={styles.time}
-            onPress={() => showMode("time")}
-          >
-            <Text style={styles.inputFieldText}>
-              {date
-                .toLocaleString()
-                .substring(date.toLocaleString().indexOf(" "))}
-            </Text>
-          </TouchableOpacity>
-        </View>
-      </ScrollView>
+      <View style={styles.inputField}>
+        <TextInput
+          style={styles.input}
+          placeholder="Game Location"
+          placeholderTextColor="#8F8F93"
+        />
+      </View>
+      <View style={styles.mainView}>
+        <TouchableOpacity style={styles.date} onPress={() => showMode("date")}>
+          <Text style={styles.inputFieldText}>
+            {date
+              .toLocaleString()
+              .substring(0, date.toLocaleString().indexOf(","))}
+          </Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.time} onPress={() => showMode("time")}>
+          <Text style={styles.inputFieldText}>
+            {date
+              .toLocaleString()
+              .substring(date.toLocaleString().indexOf(" "))}
+          </Text>
+        </TouchableOpacity>
+      </View>
       <TouchableOpacity
         style={styles.continueBtn}
-        onPress={() => navigation.navigate("SignupContinueScreen")}
+        onPress={() => navigation.goBack()}
       >
-        <Text style={styles.continueBtnText}>Continue</Text>
+        <Text style={styles.continueBtnText}>Publish New Meeting</Text>
       </TouchableOpacity>
 
       <CustomModal

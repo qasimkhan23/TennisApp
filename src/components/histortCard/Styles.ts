@@ -31,7 +31,12 @@ const styles = StyleSheet.create({
     color: "#FFF",
     fontSize: 16,
     lineHeight: 18,
-    // textAlign: "center",
+  },
+  date: {
+    fontFamily: "medium",
+    color: "#FFF",
+    fontSize: 16,
+    lineHeight: 18,
   },
   detailsText: {
     fontFamily: "medium",

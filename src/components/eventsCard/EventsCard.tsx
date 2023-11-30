@@ -22,7 +22,14 @@ const EventsCard = ({ details }: any) => {
           <View style={styles.avatarContainer}>
             <Image style={styles.avatar} source={profileImageSrc} />
           </View>
-          <View style={{ flexDirection: "row", marginTop: 12 }}>
+          <View
+            style={{
+              flexDirection: "row",
+              marginTop: 12,
+              opacity: 1,
+              // backgroundColor: "red",
+            }}
+          >
             <Text style={styles.cardTitle}>{name}</Text>
             <Text style={styles.expLevel}>{exp}</Text>
           </View>

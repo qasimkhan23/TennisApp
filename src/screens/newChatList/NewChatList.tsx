@@ -9,7 +9,7 @@ import Header from "../../components/header/Header";
 const NewChatScreen = ({ navigation }: any) => {
   let data = [
     {
-      name: "Lara Melikson",
+      name: "Lara Melikson dsfsdfsfsfsfsdfsdfsfddfsf",
       exp: "Rising",
     },
     {

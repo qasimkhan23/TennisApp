@@ -6,6 +6,7 @@ import ProfileScreen from "../src/screens/profile/Profile";
 import EditProfileScreen from "../src/screens/editProfile/EditProfile";
 import GameHistoryScreen from "../src/screens/gameHistory/GameHistory";
 import MyFriendsScreen from "../src/screens/myFriends/MyFriends";
+import NewChatScreen from "../src/screens/newChat/NewChat";
 const ProfileStack = createNativeStackNavigator();
 
 const ProfileStackScreens: FC<{}> = () => {
@@ -21,6 +22,10 @@ const ProfileStackScreens: FC<{}> = () => {
         name="GameHistoryScreen"
       />
       <ProfileStack.Screen component={MyFriendsScreen} name="MyFriendsScreen" />
+      <ProfileStack.Screen
+        component={NewChatScreen}
+        name="NestedNewChatScreen"
+      />
     </ProfileStack.Navigator>
   );
 };

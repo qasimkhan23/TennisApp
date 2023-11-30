@@ -15,8 +15,8 @@ import ChatCard from "../../components/chatCard/ChatCard";
 const ChatScreen = ({ navigation }: any) => {
   let data = [
     {
-      name: "Lara Melikson",
-      chat: "Yes, i will be there!",
+      name: "Lara Melikson sdfsdfsdfsdfsdfsdfsfsfs",
+      chat: "Yes, i will be there! dfsdfsdfsdfsfsdfsdfsdfsdfsdfsdf",
       time: "17:34",
     },
     {

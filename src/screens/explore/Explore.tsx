@@ -16,7 +16,7 @@ const ExploreScreen = ({ navigation }: any) => {
     setShow(true);
 
     setTimeout(() => {
-      navigation.navigate("EventsScreenNested");
+      navigation.navigate("ProfileDetailScreen");
       setTimeout(() => {
         setShow(false);
       }, 100);

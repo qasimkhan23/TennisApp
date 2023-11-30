@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import {
   Dimensions,
   Image,
@@ -7,6 +7,7 @@ import {
   Text,
   TouchableOpacity,
   View,
+  Platform,
 } from "react-native";
 import Dots from "../../../assets/dots.svg";
 import styles from "./Styles";
@@ -17,9 +18,24 @@ import Animated, {
   withTiming,
 } from "react-native-reanimated";
 import { Circle, Svg } from "react-native-svg";
-
+import { ZeplinHeight, ZeplinWidth } from "../../../helpers/ZeplineHelper";
+const OS = Platform.OS;
 const CircleLength = 500;
 const Radius = CircleLength / (2 * Math.PI);
+
+const Wrapper = ({ children, style = {} }) => {
+  const [childHeight, setChildHeight] = useState<any>(500);
+  const [screenHeight, setScreenHight] = useState<any>(
+    Dimensions.get("window").height - 200
+  );
+
+  const WrapperView = childHeight > screenHeight ? ScrollView : View;
+  return (
+    <WrapperView style={{ ...style }}>
+      <View>{children}</View>
+    </WrapperView>
+  );
+};
 
 const ProfileScreen = ({ navigation }: any) => {
   const circularProgress = useSharedValue(1);
@@ -45,11 +61,11 @@ const ProfileScreen = ({ navigation }: any) => {
           style={{
             height: 196,
             width: "100%",
-            marginTop: 75,
+            marginTop: "10%",
           }}
           source={require("../../../assets/profileBG.png")}
         >
-          <Svg style={{ marginTop: 80 }}>
+          <Svg style={{ marginTop: "20%" }}>
             <AnimatedCircle
               cx={"50%"}
               cy={"51%"}
@@ -64,11 +80,15 @@ const ProfileScreen = ({ navigation }: any) => {
               style={{
                 justifyContent: "center",
                 alignItems: "center",
-                marginTop: "8%",
+                marginTop: OS == "android" ? "8%" : "7.5%",
               }}
             >
               <Image
-                style={{ height: 140, width: 140, borderRadius: 134 }}
+                style={{
+                  height: "93%",
+                  width: "36%",
+                  borderRadius: 134,
+                }}
                 source={require("../../../assets/profileImage.png")}
               />
             </View>
@@ -76,12 +96,18 @@ const ProfileScreen = ({ navigation }: any) => {
         </ImageBackground>
       </View>
 
-      <ScrollView style={{ zIndex: -1 }}>
+      <Wrapper style={{ zIndex: -1 }}>
         <View style={styles.infoContainer}>
-          <Text style={styles.nameText}>Dana Miron</Text>
+          <Text numberOfLines={1} style={styles.nameText}>
+            Dana Miron
+          </Text>
           <View style={styles.despContainer}>
-            <Text style={styles.despText}>Rishon LeZion | </Text>
-            <Text style={styles.expLevel}> Fearless</Text>
+            <Text numberOfLines={1} style={styles.despText}>
+              Rishon LeZion |
+            </Text>
+            <Text numberOfLines={1} style={styles.expLevel}>
+              Fearless
+            </Text>
           </View>
         </View>
         <View style={styles.actionsContainer}>
@@ -112,7 +138,7 @@ const ProfileScreen = ({ navigation }: any) => {
         </View>
 
         <View style={styles.bioContainer}>
-          <Text style={styles.bioText}>
+          <Text style={styles.bioText} numberOfLines={2}>
             24 years old | I like to play tennis | Evenings only
           </Text>
         </View>
@@ -140,7 +166,7 @@ const ProfileScreen = ({ navigation }: any) => {
             <Text style={styles.cardText}> Yossi Brossi</Text>
           </ImageBackground>
         </View>
-      </ScrollView>
+      </Wrapper>
     </View>
   );
 };

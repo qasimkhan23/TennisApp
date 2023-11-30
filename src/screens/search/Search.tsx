@@ -13,6 +13,7 @@ import Header from "../../components/header/Header";
 import styles from "./Styles";
 
 const SearchScreen = ({ navigation }: any) => {
+  const name = "Lia Shlomi sdfsdfsdfdfsaf sdfsafdsf";
   return (
     <View style={[styles.container]}>
       <Header />
@@ -33,12 +34,19 @@ const SearchScreen = ({ navigation }: any) => {
         </View>
       </View>
       <View style={styles.pillsContainer}>
-        <ScrollView
-          horizontal
-          contentContainerStyle={{
-            justifyContent: "space-evenly",
-            flex: 1,
+        <View
+          style={{
+            flexDirection: "row",
+            flexWrap: "wrap",
+            // justifyContent: "space-evenly",
+            // height: 80,
+            // flexGrow: 1,
           }}
+          // horizontal
+          // contentContainerStyle={{
+          //   justifyContent: "space-evenly",
+          //   flex: 1,
+          // }}
         >
           <View style={styles.pill}>
             <Text style={styles.pillText}>Nearby</Text>
@@ -58,7 +66,7 @@ const SearchScreen = ({ navigation }: any) => {
           <View style={styles.pill2}>
             <Text style={styles.pillText}>My Gender</Text>
           </View>
-        </ScrollView>
+        </View>
       </View>
 
       <ScrollView contentContainerStyle={styles.contentContainerStyle}>
@@ -75,7 +83,9 @@ const SearchScreen = ({ navigation }: any) => {
                 source={require("../../../assets/profileImage.png")}
               />
             </TouchableOpacity>
-            <Text style={styles.cardText}>Lia Shlomi</Text>
+            <Text style={styles.cardText}>
+              {name.length > 25 ? name.substring(0, 25) + "..." : name}
+            </Text>
             <Text style={styles.cardExpText}>Elite</Text>
 
             <TouchableOpacity style={styles.playBtn}>
@@ -89,7 +99,9 @@ const SearchScreen = ({ navigation }: any) => {
                 source={require("../../../assets/profileImage.png")}
               />
             </View>
-            <Text style={styles.cardText}>Lia Shlomi</Text>
+            <Text style={styles.cardText}>
+              {name.length > 25 ? name.substring(0, 25) + "..." : name}
+            </Text>
             <Text style={styles.cardExpText}>Elite</Text>
 
             <TouchableOpacity style={styles.playBtn}>

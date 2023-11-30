@@ -1,4 +1,5 @@
-import { StyleSheet } from "react-native";
+import { StyleSheet, Platform } from "react-native";
+const OS = Platform.OS;
 
 const styles = StyleSheet.create({
   container: {
@@ -97,7 +98,7 @@ const styles = StyleSheet.create({
     fontFamily: "medium",
     fontSize: 18,
     color: "#FFF",
-    marginTop: 12,
+    marginTop: OS == "android" ? 2 : 12,
   },
   cardExpText: {
     fontFamily: "medium",
@@ -233,7 +234,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     paddingLeft: 10,
     paddingRight: 10,
-    marginTop: 16,
+    marginTop: 12,
   },
   playBtnText: {
     fontFamily: "medium",
@@ -244,23 +245,29 @@ const styles = StyleSheet.create({
     marginTop: 12,
   },
   pill: {
-    height: 32,
+    // height: 32,
     backgroundColor: "#8F8F93",
-    paddingLeft: 16,
-    paddingRight: 16,
+    paddingLeft: 8,
+    paddingRight: 8,
     borderRadius: 18,
     alignItems: "center",
     justifyContent: "center",
     flexDirection: "row",
+    marginHorizontal: 4,
+    margin: 4,
+    paddingVertical: 8,
   },
   pill2: {
-    height: 32,
+    // height: 32,
     backgroundColor: "#343434",
-    paddingLeft: 16,
-    paddingRight: 16,
+    paddingLeft: 8,
+    paddingRight: 8,
     borderRadius: 18,
     alignItems: "center",
     justifyContent: "center",
+    marginHorizontal: 4,
+    margin: 4,
+    paddingVertical: 8,
   },
   pillText: {
     fontFamily: "medium",
@@ -268,8 +275,8 @@ const styles = StyleSheet.create({
     fontSize: 16,
   },
   friendCard: {
-    height: 188,
-    width: "45%",
+    // height: 188,
+    width: "48%",
     backgroundColor: "#343434",
     padding: 16,
     borderRadius: 16,

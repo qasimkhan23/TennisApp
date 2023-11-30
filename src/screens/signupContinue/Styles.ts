@@ -1,5 +1,5 @@
 import { StyleSheet } from "react-native";
-
+import { ZeplinHeight, ZeplinWidth } from "../../../helpers/ZeplineHelper";
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -8,7 +8,7 @@ const styles = StyleSheet.create({
     paddingRight: 24,
   },
   bodyContainer: {
-    // flex: 1,
+    flex: 1,
     marginTop: 43,
   },
   contentContainerStyle: {
@@ -104,10 +104,13 @@ const styles = StyleSheet.create({
     color: "#EEE",
   },
   bg: {
-    width: 170,
-    height: 170,
+    width: 160,
+    height: 160,
+    // flex: 1,
     borderRadius: 16,
     marginBottom: 17,
+    // paddingHorizontal: 16,
+    // paddingVertical: 20,
   },
   transparentView: {
     flex: 1,

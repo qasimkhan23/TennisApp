@@ -35,6 +35,7 @@ const BottomStackScreens: FC<{}> = ({ navigation }: any) => {
           tabBarIcon: ({ focused }) => {
             return focused ? <ActiveProfile /> : <InactiveProfile />;
           },
+          tabBarActiveTintColor: "#D5FF45",
         }}
         component={ProfileStackScreens}
         name="Profile"
@@ -44,6 +45,7 @@ const BottomStackScreens: FC<{}> = ({ navigation }: any) => {
           tabBarIcon: ({ focused }) => {
             return focused ? <ActiveSearch /> : <InactiveSearch />;
           },
+          tabBarActiveTintColor: "#D5FF45",
         }}
         component={SearchStackScreens}
         name="Search"
@@ -53,6 +55,7 @@ const BottomStackScreens: FC<{}> = ({ navigation }: any) => {
           tabBarIcon: ({ focused }) => {
             return focused ? <ActiveProfile /> : <InactiveProfile />;
           },
+          tabBarActiveTintColor: "#D5FF45",
         }}
         component={EventsStackScreens}
         name="Events"
@@ -62,6 +65,7 @@ const BottomStackScreens: FC<{}> = ({ navigation }: any) => {
           tabBarIcon: ({ focused }) => {
             return focused ? <ActiveExplore /> : <InactiveExplore />;
           },
+          tabBarActiveTintColor: "#D5FF45",
         }}
         component={ExploreStackScreens}
         name="Explore"
@@ -71,6 +75,7 @@ const BottomStackScreens: FC<{}> = ({ navigation }: any) => {
           tabBarIcon: ({ focused }) => {
             return focused ? <ActiveChat /> : <InactiveChat />;
           },
+          tabBarActiveTintColor: "#D5FF45",
         }}
         component={ChatStackScreens}
         name="Chat"

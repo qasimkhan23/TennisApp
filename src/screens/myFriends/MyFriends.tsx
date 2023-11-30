@@ -11,11 +11,11 @@ const Radius = CircleLength / (2 * Math.PI);
 const MyFriendsScreen = ({ navigation }: any) => {
   let data = [
     {
-      name: "Lara Melikson",
+      name: "Lara Melikson dfsdfsfsfsdfsdfsdfsfsdf",
       exp: "Smasher",
     },
     {
-      name: "Dana reznikov",
+      name: "Dana reznikov dsfsdfsdfsdfsdfsdfsdfsdfsdfdsfsdf",
       exp: "Legend",
     },
     {

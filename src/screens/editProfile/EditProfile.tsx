@@ -17,7 +17,7 @@ import Animated, {
 } from "react-native-reanimated";
 import { Circle, Svg } from "react-native-svg";
 import Header from "../../components/header/Header";
-
+import Wrapper from "../../components/wrapper/Wrapper";
 const CircleLength = 500;
 const Radius = CircleLength / (2 * Math.PI);
 
@@ -53,7 +53,7 @@ const EditProfileScreen = ({ navigation }: any) => {
           />
         </View>
       </Svg>
-      <ScrollView contentContainerStyle={styles.contentContainerStyle}>
+      <Wrapper style={{ flex: 1 }}>
         <View style={styles.mainView}>
           <View style={styles.inputField}>
             <TextInput
@@ -81,10 +81,13 @@ const EditProfileScreen = ({ navigation }: any) => {
             />
           </View>
         </View>
-        <TouchableOpacity style={styles.submitBtn}>
-          <Text style={styles.submitBtnText}>Submit Changes</Text>
-        </TouchableOpacity>
-      </ScrollView>
+      </Wrapper>
+      <TouchableOpacity
+        style={styles.submitBtn}
+        onPress={() => navigation.navigate("ProfileScreen")}
+      >
+        <Text style={styles.submitBtnText}>Submit Changes</Text>
+      </TouchableOpacity>
     </View>
   );
 };

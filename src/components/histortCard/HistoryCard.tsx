@@ -13,10 +13,14 @@ const HistoryCard = ({ navigation, details }: any) => {
       >
         <Ball style={styles.ball} />
       </ImageBackground>
-      <View>
-        <Text style={styles.name}>{name} </Text>
-        <Text style={styles.name}>{date} </Text>
-        <Text style={styles.detailsText}>{id}</Text>
+      <View style={{ justifyContent: "center", alignItems: "center" }}>
+        <Text style={styles.name}>
+          {name.length > 25 ? name.substring(0, 25) + "..." : name}
+        </Text>
+        <Text style={styles.date}>{date} </Text>
+        <Text numberOfLines={1} style={styles.detailsText}>
+          {id}
+        </Text>
       </View>
       <ImageBackground
         style={styles.ImageBackground}
