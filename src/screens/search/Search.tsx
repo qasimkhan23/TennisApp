@@ -40,24 +40,24 @@ const SearchScreen = ({ navigation }: any) => {
             flexWrap: "wrap",
           }}
         >
-          <View style={styles.pill}>
+          <TouchableOpacity style={styles.pill}>
             <Text style={styles.pillText}>Nearby</Text>
             <TouchableOpacity>
               <Cross />
             </TouchableOpacity>
-          </View>
-          <View style={styles.pill}>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.pill}>
             <Text style={styles.pillText}>Elite</Text>
             <TouchableOpacity>
               <Cross />
             </TouchableOpacity>
-          </View>
-          <View style={styles.pill2}>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.pill2}>
             <Text style={styles.pillText}>My Age</Text>
-          </View>
-          <View style={styles.pill2}>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.pill2}>
             <Text style={styles.pillText}>My Gender</Text>
-          </View>
+          </TouchableOpacity>
         </View>
       </View>
 

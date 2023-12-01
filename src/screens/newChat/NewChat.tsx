@@ -20,6 +20,7 @@ const NewChatScreen = ({ navigation }: any) => {
     time: "17:34",
   };
   const inputRef = useRef<any>();
+  const scrollViewRef = useRef<any>();
 
   return (
     <View style={[styles.container]}>
@@ -62,8 +63,103 @@ const NewChatScreen = ({ navigation }: any) => {
         </TouchableOpacity>
       </View>
 
-      <ScrollView>
+      <ScrollView
+        ref={scrollViewRef}
+        onContentSizeChange={() =>
+          scrollViewRef.current.scrollToEnd({ animated: true })
+        }
+      >
         <View style={{ marginTop: 16 }}>
+          <View style={styles.chatBar}>
+            <Text>typed some chat here</Text>
+          </View>
+          <View style={styles.selfChatBar}>
+            <Text>typed some chat here</Text>
+          </View>
+          <View style={styles.chatBar}>
+            <Text>typed some chat here</Text>
+          </View>
+          <View style={styles.chatBar}>
+            <Text>typed some chat here</Text>
+          </View>
+          <View style={styles.selfChatBar}>
+            <Text>typed some chat here</Text>
+          </View>
+          <View style={styles.chatBar}>
+            <Text>typed some chat here</Text>
+          </View>
+          <View style={styles.selfChatBar}>
+            <Text>typed some chat here</Text>
+          </View>
+          <View style={styles.chatBar}>
+            <Text>typed some chat here</Text>
+          </View>
+          <View style={styles.chatBar}>
+            <Text>typed some chat here</Text>
+          </View>
+          <View style={styles.selfChatBar}>
+            <Text>typed some chat here</Text>
+          </View>
+          <View style={styles.chatBar}>
+            <Text>typed some chat here</Text>
+          </View>
+          <View style={styles.selfChatBar}>
+            <Text>typed some chat here</Text>
+          </View>
+          <View style={styles.chatBar}>
+            <Text>typed some chat here</Text>
+          </View>
+          <View style={styles.chatBar}>
+            <Text>typed some chat here</Text>
+          </View>
+          <View style={styles.selfChatBar}>
+            <Text>typed some chat here</Text>
+          </View>
+          <View style={styles.chatBar}>
+            <Text>typed some chat here</Text>
+          </View>
+          <View style={styles.selfChatBar}>
+            <Text>typed some chat here</Text>
+          </View>
+          <View style={styles.chatBar}>
+            <Text>typed some chat here</Text>
+          </View>
+          <View style={styles.chatBar}>
+            <Text>typed some chat here</Text>
+          </View>
+          <View style={styles.selfChatBar}>
+            <Text>typed some chat here</Text>
+          </View>
+          <View style={styles.chatBar}>
+            <Text>typed some chat here</Text>
+          </View>
+          <View style={styles.selfChatBar}>
+            <Text>typed some chat here</Text>
+          </View>
+          <View style={styles.chatBar}>
+            <Text>typed some chat here</Text>
+          </View>
+          <View style={styles.chatBar}>
+            <Text>typed some chat here</Text>
+          </View>
+          <View style={styles.selfChatBar}>
+            <Text>typed some chat here</Text>
+          </View>
+          <View style={styles.chatBar}>
+            <Text>typed some chat here</Text>
+          </View>
+          <View style={styles.selfChatBar}>
+            <Text>typed some chat here</Text>
+          </View>
+          <View style={styles.chatBar}>
+            <Text>typed some chat here</Text>
+          </View>
+          <View style={styles.chatBar}>
+            <Text>typed some chat here</Text>
+          </View>
+          <View style={styles.selfChatBar}>
+            <Text>typed some chat here</Text>
+          </View>
           <View style={styles.chatBar}>
             <Text>typed some chat here</Text>
           </View>
