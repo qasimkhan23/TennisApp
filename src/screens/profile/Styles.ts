@@ -89,7 +89,7 @@ const styles = StyleSheet.create({
   },
   cardsContainer: {
     justifyContent: "center",
-    marginTop: OS == "android" ? "0%" : "30%",
+    marginTop: OS == "android" ? "0%" : "20%",
     flexDirection: "row",
   },
   card: {

@@ -9,7 +9,7 @@ const styles = StyleSheet.create({
   },
   bodyContainer: {
     flex: 1,
-    marginTop: 43,
+    marginTop: "4%",
   },
   contentContainerStyle: {
     // flex: 1,
@@ -73,7 +73,7 @@ const styles = StyleSheet.create({
     marginTop: 6,
     justifyContent: "center",
     alignItems: "center",
-    marginBottom: 32,
+    marginBottom: 24,
   },
   signupBtnText: {
     fontFamily: "semiBold",

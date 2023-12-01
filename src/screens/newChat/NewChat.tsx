@@ -51,8 +51,8 @@ const NewChatScreen = ({ navigation }: any) => {
               />
             </View>
             <Text style={styles.name}>
-              {data.name.length > 20
-                ? data.name.substring(0, 20) + "..."
+              {data.name.length > 18
+                ? data.name.substring(0, 18) + "..."
                 : data.name}
             </Text>
           </View>
@@ -62,8 +62,8 @@ const NewChatScreen = ({ navigation }: any) => {
         </TouchableOpacity>
       </View>
 
-      <ScrollView contentContainerStyle={styles.contentContainerStyle}>
-        <View style={{ flex: 1, marginTop: 16 }}>
+      <ScrollView>
+        <View style={{ marginTop: 16 }}>
           <View style={styles.chatBar}>
             <Text>typed some chat here</Text>
           </View>

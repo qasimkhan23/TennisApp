@@ -280,7 +280,7 @@ const styles = StyleSheet.create({
     backgroundColor: "#343434",
     padding: 16,
     borderRadius: 16,
-    marginTop: 24,
+    marginTop: 16,
   },
   cardsWrapper: {
     flexDirection: "row",

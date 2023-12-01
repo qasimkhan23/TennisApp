@@ -30,7 +30,10 @@ const EventsCard = ({ details }: any) => {
               // backgroundColor: "red",
             }}
           >
-            <Text style={styles.cardTitle}>{name}</Text>
+            <Text style={styles.cardTitle}>
+              {" "}
+              {name.length > 20 ? name.substring(0, 20) + "..." : name}
+            </Text>
             <Text style={styles.expLevel}>{exp}</Text>
           </View>
 

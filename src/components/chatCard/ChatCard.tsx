@@ -26,7 +26,7 @@ const ChatCard = ({ details, index, arrayLength, isNewChat }: any) => {
         />
         <View style={styles.cardTextContainer}>
           <Text style={styles.cardText}>
-            {name.length > 20 ? name.substring(0, 20) + "..." : name}
+            {name.length > 18 ? name.substring(0, 18) + "..." : name}
           </Text>
 
           <Text

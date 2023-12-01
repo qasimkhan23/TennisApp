@@ -1,12 +1,13 @@
 import React, { useEffect } from "react";
 import {
   Dimensions,
-  Image,
+  // Image,
   ScrollView,
   Text,
   TextInput,
   TouchableOpacity,
   View,
+  Platform,
 } from "react-native";
 import styles from "./Styles";
 
@@ -15,10 +16,15 @@ import Animated, {
   useSharedValue,
   withTiming,
 } from "react-native-reanimated";
-import { Circle, Svg } from "react-native-svg";
+import { Circle, Svg, Image } from "react-native-svg";
 import Header from "../../components/header/Header";
 import Wrapper from "../../components/wrapper/Wrapper";
-const CircleLength = 500;
+
+const { width, height } = Dimensions.get("window");
+const OS = Platform.OS;
+console.log("height", height);
+const CircleLength = OS == "android" ? height * 0.73 : height * 0.54;
+
 const Radius = CircleLength / (2 * Math.PI);
 
 const EditProfileScreen = ({ navigation }: any) => {
@@ -46,12 +52,13 @@ const EditProfileScreen = ({ navigation }: any) => {
           animatedProps={animatedProps}
           strokeLinecap="round"
         />
-        <View style={styles.avatarContainer}>
-          <Image
-            style={styles.avatar}
-            source={require("../../../assets/profileImage.png")}
-          />
-        </View>
+        <Image
+          x="15%"
+          y="16%"
+          width="70%"
+          height="70%"
+          href={require("../../../assets/profileImage.png")}
+        />
       </Svg>
       <Wrapper style={{ flex: 1 }}>
         <View style={styles.mainView}>

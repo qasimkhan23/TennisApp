@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import {
   Dimensions,
-  Image,
+  // Image,
   ImageBackground,
   ScrollView,
   Text,
@@ -17,7 +17,7 @@ import Animated, {
   useSharedValue,
   withTiming,
 } from "react-native-reanimated";
-import { Circle, Svg } from "react-native-svg";
+import { Circle, Svg, Image } from "react-native-svg";
 import { ZeplinHeight, ZeplinWidth } from "../../../helpers/ZeplineHelper";
 const OS = Platform.OS;
 const CircleLength = 500;
@@ -65,7 +65,14 @@ const ProfileScreen = ({ navigation }: any) => {
           }}
           source={require("../../../assets/profileBG.png")}
         >
-          <Svg style={{ marginTop: "20%" }}>
+          <Svg
+            style={{
+              marginTop: "20%",
+              // backgroundColor: "red",
+              height: "100%",
+              width: "100%",
+            }}
+          >
             <AnimatedCircle
               cx={"50%"}
               cy={"51%"}
@@ -76,6 +83,13 @@ const ProfileScreen = ({ navigation }: any) => {
               animatedProps={animatedProps}
               strokeLinecap="round"
             />
+            <Image
+              x="15%"
+              y="16%"
+              width="70%"
+              height="70%"
+              href={require("../../../assets/profileImage.png")}
+            />
             <View
               style={{
                 justifyContent: "center",
@@ -83,14 +97,25 @@ const ProfileScreen = ({ navigation }: any) => {
                 marginTop: OS == "android" ? "8%" : "7.5%",
               }}
             >
-              <Image
+              {/* <Image
                 style={{
                   height: "93%",
                   width: "36%",
                   borderRadius: 134,
                 }}
                 source={require("../../../assets/profileImage.png")}
-              />
+              /> */}
+
+              {/* <Image
+                x="5%"
+                y="5%"
+                width="100%"
+                height="100%"
+                // preserveAspectRatio="xMidYMid slice"
+                // opacity="0.5"
+                href={require("../../../assets/profileImage.png")}
+                // clipPath="url(#clip)"
+              /> */}
             </View>
           </Svg>
         </ImageBackground>

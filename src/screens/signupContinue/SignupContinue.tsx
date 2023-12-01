@@ -57,13 +57,7 @@ const SignupContinueScreen = ({ navigation }: any) => {
         style={styles.bodyContainer}
         // contentContainerStyle={styles.contentContainerStyle}
       >
-        <View
-          style={styles.mainView}
-          onLayout={({ nativeEvent }) => {
-            console.log("nativeee", nativeEvent);
-            // setChildHeight(nativeEvent.layout.height);
-          }}
-        >
+        <View style={styles.mainView}>
           <ImageBackground
             style={styles.bg}
             source={require("../../../assets/bg_1.png")}

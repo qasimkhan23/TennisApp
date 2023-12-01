@@ -21,7 +21,7 @@ const FriendsCard = ({ details, index, arrayLength }: any) => {
         />
         <View style={styles.cardTextContainer}>
           <Text style={styles.cardText}>
-            {name.length > 25 ? name.substring(0, 25) + "..." : name}
+            {name.length > 20 ? name.substring(0, 20) + "..." : name}
           </Text>
           <Text style={styles.cardExpText}>{exp}</Text>
         </View>

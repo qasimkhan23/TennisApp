@@ -38,15 +38,7 @@ const SearchScreen = ({ navigation }: any) => {
           style={{
             flexDirection: "row",
             flexWrap: "wrap",
-            // justifyContent: "space-evenly",
-            // height: 80,
-            // flexGrow: 1,
           }}
-          // horizontal
-          // contentContainerStyle={{
-          //   justifyContent: "space-evenly",
-          //   flex: 1,
-          // }}
         >
           <View style={styles.pill}>
             <Text style={styles.pillText}>Nearby</Text>

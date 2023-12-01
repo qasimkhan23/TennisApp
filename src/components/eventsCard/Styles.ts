@@ -3,14 +3,15 @@ import { StyleSheet } from "react-native";
 const styles = StyleSheet.create({
   bg: {
     height: 164,
+    // width: "97%",
     borderRadius: 16,
     marginBottom: 17,
     marginTop: 16,
   },
   transparentView: {
     flex: 1,
-    backgroundColor: "black",
-    opacity: 0.78,
+    // backgroundColor: "black",
+    // opacity: 0.78,
     borderRadius: 10,
     // alignItems: "center",
     paddingHorizontal: 12,

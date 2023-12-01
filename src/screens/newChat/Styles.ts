@@ -114,7 +114,7 @@ const styles = StyleSheet.create({
     paddingTop: 16,
   },
   inputField: {
-    height: 64,
+    // height: 44,
     width: "80%",
     // backgroundColor: "red",
     borderRadius: 16,
@@ -123,6 +123,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     marginBottom: 19,
     marginTop: 16,
+    paddingVertical: 14,
     // alignItems: "center",
   },
   inputFieldText: {
@@ -133,7 +134,7 @@ const styles = StyleSheet.create({
   },
   input: {
     color: "#8F8F93",
-    fontSize: 24,
+    fontSize: 16,
     fontFamily: "medium",
     marginLeft: 12,
     marginTop: OS == "android" ? 10 : 0,
@@ -196,16 +197,15 @@ const styles = StyleSheet.create({
     // marginTop: 12,
   },
   chatBar: {
-    width: 240,
     backgroundColor: "#8F8F93",
     padding: 16,
     borderTopLeftRadius: 16,
     borderTopRightRadius: 16,
     borderBottomRightRadius: 16,
     marginTop: 16,
+    alignSelf: "flex-start",
   },
   selfChatBar: {
-    width: 240,
     backgroundColor: "#EEE",
     padding: 16,
     borderTopLeftRadius: 16,
